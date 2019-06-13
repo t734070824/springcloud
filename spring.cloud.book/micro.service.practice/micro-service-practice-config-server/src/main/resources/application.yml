@@ -5,9 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/t734070824/springcloud/tree
+          uri: https://github.com/t734070824/springcloud.git
           search-paths: git-config
-          username: t734070824
-          password: t05575341338
 server:
   port: 7001
