@@ -6,4 +6,5 @@ eureka:
   client:
     service-url:
       # 指定eureka server通信地址，注意/eureka/小尾巴不能少
-      defaultZone: http://peer1:1111/eureka/, http://peer2:1112/eureka/
+      defaultZone: http://peer1:1111/eureka/
+     # defaultZone: http://peer1:1111/eureka/, http://peer2:1112/eureka/

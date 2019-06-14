@@ -14,5 +14,29 @@
     - 会出现客户端调用失败的
     - 需要 客户端 请求重试, 断路器
     
-### 源码分析
-1. 
+### 源码分析 client
+1. 注册
+    - 独立一个 thread, 单词
+    - instanceInfoReplicator
+        - 注册 instanceInfo
+2. 服务获取
+    - eureka.client.fetch-registry=true
+        - 是否从server 拉取服务
+    - CacheRefreshThread
+        - **根据是否是第一次 发起不同的请求**
+3. 服务续约 / 心跳
+    - 一起的
+
+### 源码分析 server
+1. ConcurrentHashMap<Appname, <Appid, instanceInfo>>
+
+### 常用配置
+1. 服务注册相关
+    - 注册中心地址
+    - 服务获取的间隔时间
+    - 可用区域
+2. 服务实例
+    - 名称
+    - IP
+    - 端口
+    - 健康检查路径
